@@ -16,7 +16,8 @@ RUN apt-get install -y \
 	wget \
 	make \
 	build-essential \
-	tcl
+	tcl \
+	xsltproc
 
 # Install PHP7
 RUN apt-get install -y \

@@ -47,11 +47,14 @@ RUN composer global require "phpunit/phpunit=5.6.*"
 # Install Laravel installer
 RUN composer global require "laravel/installer"
 
-# Install Redis server
+# Download and build Redis and its deps
 RUN wget http://download.redis.io/releases/redis-stable.tar.gz && \
     tar xvzf redis-stable.tar.gz && \
     rm redis-stable.tar.gz && \
     cd redis-stable && \
+    cd deps && \
+    make hiredis jemalloc linenoise && \
+    cd .. && \
     make && \
     make test && \
     make install && \
@@ -59,6 +62,7 @@ RUN wget http://download.redis.io/releases/redis-stable.tar.gz && \
     rm -Rf ../redis-stable && \
     mkdir /var/log/redis
 
+# Download and build phpredis for php7
 RUN wget https://github.com/phpredis/phpredis/archive/php7.tar.gz && \
     tar zxvf php7.tar.gz && \
     rm -Rf php7.tar.gz && \

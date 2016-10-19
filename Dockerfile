@@ -19,7 +19,8 @@ RUN apt-get install -y \
 	tcl \
 	xsltproc \
 	libjemalloc-dev \ 
-	liblua5.1-0-dev
+	liblua5.1-0-dev \
+	curl
 
 # Install PHP7
 RUN apt-get install -y \

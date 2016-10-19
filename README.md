@@ -26,10 +26,10 @@ Docker container - Ubuntu 16.04, php7, composer, phpunit, &amp; laravel installe
 
 # PHP Components
 
-* (Composer)[https://getcomposer.org/]
-* (hirak/prestissimo)[https://github.com/hirak/prestissimo] - Composer add on the speeds up composer
-* (phpunit/phpunit)[https://phpunit.de]
-* (Laravel)[https://laravel.com]
+* [Composer](https://getcomposer.org)
+* [hirak/prestissimo](https://github.com/hirak/prestissimo) - Composer add on the speeds up composer
+* [phpunit/phpunit](https://phpunit.de)
+* [Laravel](https://laravel.com)
 
 # Misc
 

@@ -18,7 +18,7 @@ RUN apt-get install -y \
 	build-essential \
 	tcl \
 	xsltproc \
-	gcc
+	libjemalloc-dev
 
 # Install PHP7
 RUN apt-get install -y \
@@ -55,7 +55,7 @@ RUN wget http://download.redis.io/releases/redis-stable.tar.gz && \
     rm redis-stable.tar.gz && \
     cd redis-stable && \
     cd deps && \
-    make hiredis jemalloc linenoise && \
+    make hiredis linenoise && \
     cd .. && \
     make && \
     make test && \

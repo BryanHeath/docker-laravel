@@ -13,11 +13,15 @@ RUN apt-get install -y \
 	zip \
 	nginx \
 	vim \
-	wget
+	wget \
+	make \
+	build-essential \
+	tcl
 
 # Install PHP7
 RUN apt-get install -y \
 	php7.0 \
+	php7.0-dev \
 	php7.0-fpm \
 	php7.0-mbstring \
 	php7.0-xml \
@@ -42,6 +46,28 @@ RUN composer global require "phpunit/phpunit=5.6.*"
 
 # Install Laravel installer
 RUN composer global require "laravel/installer"
+
+# Install Redis server
+RUN wget http://download.redis.io/releases/redis-stable.tar.gz && \
+    tar xvzf redis-stable.tar.gz && \
+    rm redis-stable.tar.gz && \
+    cd redis-stable && \
+    make && \
+    make test && \
+    make install && \
+    cp redis.conf /etc/redis.conf && \
+    rm -Rf ../redis-stable && \
+    mkdir /var/log/redis
+
+RUN wget https://github.com/phpredis/phpredis/archive/php7.tar.gz && \
+    tar zxvf php7.tar.gz && \
+    rm -Rf php7.tar.gz && \
+    cd phpredis-php7/ && \
+    phpize && \
+    ./configure && \
+    make && \
+    make install && \
+    rm -Rf ../phpredis-php7
 
 # Cleanup
 RUN apt-get clean && \

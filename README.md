@@ -12,6 +12,7 @@ Docker container - Ubuntu 16.04, php7, composer, phpunit, &amp; laravel installe
 * wget
 * Vim
 * sqlite3
+* Redis
 
 # PHP7
 
@@ -23,13 +24,14 @@ Docker container - Ubuntu 16.04, php7, composer, phpunit, &amp; laravel installe
 * php7.0-json
 * php7.0-zip
 * php7.0-sqlite3
+* phpRedis 7
 
 # PHP Components
 
-* [Composer](https://getcomposer.org)
+* [Composer](https://getcomposer.org) - Current stable release
 * [hirak/prestissimo](https://github.com/hirak/prestissimo) - Composer addon that speeds up composer
-* [phpunit/phpunit](https://phpunit.de)
-* [Laravel](https://laravel.com)
+* [phpunit/phpunit](https://phpunit.de) - Current stable release
+* [Laravel Installer](https://laravel.com) - Current stable release
 
 # Misc
 

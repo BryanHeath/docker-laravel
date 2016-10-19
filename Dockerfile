@@ -1,5 +1,5 @@
-#FROM ubuntu:16.10
-FROM blitznote/debootstrap-amd64:16.04
+FROM ubuntu:16.10
+#FROM blitznote/debootstrap-amd64:16.04
 
 # Needed to stop install from prompting
 ARG DEBIAN_FRONTED=noninteractive

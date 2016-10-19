@@ -1,9 +1,9 @@
 # docker-laravel
-Docker container - Ubuntu 16.04, php7, composer, phpunit, &amp; laravel installer
+Docker container - Ubuntu 16.10, php7, composer, phpunit, &amp; laravel installer
 
 # Base Docker Image
 
-[blitznote/debootstrap-amd64:16.04](https://github.com/Blitznote/docker-ubuntu-debootstrap)
+Stock Ubuntu 16.10
 
 # Linux Components
 
@@ -12,6 +12,7 @@ Docker container - Ubuntu 16.04, php7, composer, phpunit, &amp; laravel installe
 * wget
 * Vim
 * sqlite3
+* Curl
 * Redis
 
 # PHP7
